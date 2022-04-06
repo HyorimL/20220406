@@ -5,10 +5,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+table {
+    width: 60%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+    padding: 10px;
+  }
+</style>
 </head>
 <body>
 <div align="center">
-	<div><h1>공지사항 등록</h1></div>
+	<div><h4>NOTICE REGISTRAION</h4></div>
 	<div>
 		<form id="frm" action="noticeInsert.do" method="post" enctype="multipart/form-data">
 			<div>

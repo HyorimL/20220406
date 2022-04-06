@@ -16,7 +16,7 @@
 <br>
 
 <a href="noticeList.do">notice</a><br>
-<a href="noticeInputForm.do">공지사항 등록</a><br>
+<a href="noticeInputForm.do">notice registration</a><br>
 <a href="noTiles.do">no tiles</a>
 </div>
 

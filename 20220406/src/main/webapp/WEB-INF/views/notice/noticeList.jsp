@@ -6,12 +6,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+table {
+    width: 60%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+    padding: 10px;
+  }
+
+th, td {
+	text-align: center;
+}
+
+</style>
 </head>
 <body>
 <div align="center">
 	<div><h3>N O T I C E</h3></div>
 	<br>
-	<hr>
+	<a href="noticeInputForm.do">notice registration</a><br>
 	<div>
 		<table>
 			<thead>
