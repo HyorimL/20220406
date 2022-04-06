@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.lhr.prj.notice.service.NoticeMapper">
+
+	<select id="noticeList" resultType="Notice">
+		
+		<![CDATA[
+		
+		SELECT * 
+		FROM (
+				SELECT ROWNUM AS RNUM, T.*
+				FROM NOTICE T
+				WHERE ROWNUM <= #{pageNo} * 10
+				ORDER BY ID DESC
+			) WHERE 1 + ( 10 * ( #{pageNo} - 1)) <= RNUM
+			
+			]]>
+			
+	</select>
+	
+	<select id="noticeSelect" parameterType="Notice" resultType="Notice">
+	
+	</select>
+	
+	<insert id="noticeInsert" parameterType="Notice">
+		
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			SELECT MAX(ID) + 1 FROM NOTICE
+		</selectKey>
+		
+		INSERT INTO NOTICE
+		VALUES(#{id}, #{title}, #{content}, #{wdate}, 0, #{filename}, #{uuidfile})
+		
+	</insert>
+
+	<update id="noticeUpdate" parameterType="Notice">
+	
+	</update>
+	
+	<delete id="noticeDelete" parameterType="Notice">
+	
+	</delete>
+
+
+</mapper>
